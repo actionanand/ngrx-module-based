@@ -7,10 +7,11 @@ import { AppComponent } from './app.component';
 import { CounterOutputComponent } from './counter-output/counter-output.component';
 import { CounterControlsComponent } from './counter-controls/counter-controls.component';
 import { rootReducer } from './store/rootReducer';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent, CounterOutputComponent, CounterControlsComponent],
-  imports: [BrowserModule, StoreModule.forRoot(rootReducer)],
+  imports: [BrowserModule, StoreModule.forRoot(rootReducer), EffectsModule.forRoot([])],
   providers: [],
   bootstrap: [AppComponent],
 })
